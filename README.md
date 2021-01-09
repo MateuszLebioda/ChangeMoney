@@ -32,6 +32,9 @@ For example, to change 500 into 1, 2 and 5 coin you will use command: `java -jar
  \
  \
  -t -> On text mode. Application will save result in txt file
+ \
+ \
+ -rt -> Algorithm using recursion table. The fasts algorithm, is not allowed using graphic and text mode.
  
 ###### WARRING! To both of above mode generation time will be longer and to big data you can get StackOverFlow Exception
 

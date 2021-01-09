@@ -2,6 +2,7 @@ package com.mateusz.lebioda;
 
 import com.mateusz.lebioda.service.change.money.ChangeMoney;
 import com.mateusz.lebioda.service.change.money.ChangeMoneyGraphic;
+import com.mateusz.lebioda.service.change.money.ChangeMoneyTable;
 import com.mateusz.lebioda.service.change.money.DoChangeMoney;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,6 +48,9 @@ public class Main {
                 case "-t":
                     generator = new ChangeMoneyGraphic(true);
                     break;
+                case "-rt":
+                    generator = new ChangeMoneyTable();
+                    break;
                 case "-h":
                 case "-help":
                     logger.info("\n\n" +
@@ -54,6 +58,7 @@ public class Main {
                             " -d -> Denomination list. For example: -d [1,2,5], \n\n" +
                             " -g -> On graphic mode, \n\n" +
                             " -t -> On text mode. Application will save result in txt file, \n\n" +
+                            " -rt -> Algorithm using recursion table. The fasts algorithm, is not allowed using graphic and text mode. \n\n" +
                             " WARRING! To both of above mode generation time will be longer and to big data you can get StackOverFlow Exception\n\n");
                     System.exit(-1);
             }
